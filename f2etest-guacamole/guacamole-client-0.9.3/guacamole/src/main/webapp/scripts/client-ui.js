@@ -1028,7 +1028,7 @@ GuacUI.Client.connect = function() {
     if(height){
         optimal_height = (height - GuacUI.Client.text_input.container.offsetHeight) * pixel_density;
     }
-    connect_string += '&height='+encodeURIComponent(optimal_height);
+    connect_string += '&height='+encodeURIComponent(parseInt(Math.floor(optimal_height)));
 
     var username = query['username'];
     if(username){
